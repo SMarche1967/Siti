@@ -18,6 +18,7 @@
       background: var(--white);
       color: var(--dark);
       overflow-x: hidden;
+	  padding-bottom: 120px; /* ← aggiungi solo questa riga */
     }
 
     /* ─── NAV ─── */
@@ -94,7 +95,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: var(--gray-light);
+      background: #fff;
       padding: 120px 40px 80px;
       position: relative;
       overflow: hidden;
@@ -112,9 +113,12 @@
       pointer-events: none;
     }
 
-    .hero-logo-wrap {
-      animation: fadeUp 0.9s ease both;
-    }
+	.hero-logo-wrap {
+	  animation: fadeUp 0.9s ease both;
+	  margin-bottom: 40px; /* spazio tra logo e testo */
+	  background: transparent;
+      padding: 10px;
+	}
 
     /* SVG Logo inline */
     .logo-svg {
@@ -506,17 +510,22 @@
       line-height: 1.6;
     }
 
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.5);
-      padding: 40px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+	/* ─── FOOTER ─── */
+	footer {
+	  position: fixed;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  z-index: 100;
+	  background: var(--dark);
+	  color: rgba(255,255,255,0.5);
+	  padding: 40px 60px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  gap: 16px;
+	}
 
     .footer-brand {
       font-family: 'Cormorant Garamond', serif;
@@ -540,11 +549,21 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--red); }
+	.footer-links svg {
+	  width: 20px;
+	  height: 20px;
+	  fill: rgba(255,255,255,0.45);
+	  vertical-align: middle;
+	  transition: fill 0.2s;
+	}
+	.footer-links a:hover svg {
+	  fill: var(--red);
+	}
 
     /* ─── WHATSAPP FLOAT ─── */
     .whatsapp-float {
       position: fixed;
-      bottom: 30px; right: 30px;
+      bottom: 120px; right: 10px;
       background: #25D366;
       width: 58px; height: 58px;
       border-radius: 50%;
