@@ -1,4 +1,4 @@
-    :root {
+:root {
       --red: #9B2C2C;
       --red-light: #C0392B;
       --dark: #1a1a1a;
@@ -18,7 +18,7 @@
       background: var(--white);
       color: var(--dark);
       overflow-x: hidden;
-	  padding-bottom: 120px; /* ← aggiungi solo questa riga */
+      padding-bottom: 60px;
     }
 
     /* ─── NAV ─── */
@@ -37,23 +37,24 @@
     }
     nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 
-	.nav-logo {
-	  font-family: 'Cormorant Garamond', serif;
-	  font-size: 1.35rem;
-	  font-weight: 700;
-	  letter-spacing: 0.05em;
-	  color: var(--dark);
-	  text-decoration: none;
-	  line-height: 0.9;
-	}
-		
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--dark);
+      text-decoration: none;
+      line-height: 0.9;
+    }
+
     .nav-logo span { color: var(--red); }
 
-	.nav-subtitle {
-	  font-size: 0.85rem;
-	  font-weight: 300;
-	  letter-spacing: 0.04em;
-	}
+    .nav-subtitle {
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+
     .nav-links {
       display: flex;
       gap: 40px;
@@ -108,7 +109,6 @@
       overflow: hidden;
     }
 
-    /* Decorative diagonal stripe */
     #hero::before {
       content: '';
       position: absolute;
@@ -120,14 +120,13 @@
       pointer-events: none;
     }
 
-	.hero-logo-wrap {
-	  animation: fadeUp 0.9s ease both;
-	  margin-bottom: 40px; /* spazio tra logo e testo */
-	  background: transparent;
+    .hero-logo-wrap {
+      animation: fadeUp 0.9s ease both;
+      margin-bottom: 40px;
+      background: transparent;
       padding: 10px;
-	}
+    }
 
-    /* SVG Logo inline */
     .logo-svg {
       width: 340px;
       max-width: 90vw;
@@ -249,7 +248,6 @@
       background: var(--white);
     }
 
-    .about-text { }
     .about-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -348,7 +346,7 @@
       line-height: 1.75;
     }
 
-    /* ─── GALLERY PLACEHOLDER ─── */
+    /* ─── GALLERY ─── */
     #gallery {
       background: var(--dark);
       color: var(--white);
@@ -365,29 +363,29 @@
       max-width: 1200px;
     }
     .gallery-item {
-	  border-radius: 3px;
-	  overflow: hidden;
-	  position: relative;
-	  background: var(--gray-dark);
-	}
-	.gallery-item img {
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	  display: block;
-	}
-	.gallery-overlay {
-	  position: absolute;
-	  bottom: 0;
-	  left: 0;
-	  width: 100%;
-	  padding: 10px;
-	  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-	  color: #fff;
-	  font-size: 0.75rem;
-	  letter-spacing: 0.1em;
-	  text-transform: uppercase;
-	}
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+      background: var(--gray-dark);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: #fff;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
     .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
     .gallery-item:nth-child(4) { grid-column: span 2; }
 
@@ -462,9 +460,7 @@
 
     /* Form */
     .contact-form { display: flex; flex-direction: column; gap: 20px; }
-
     .form-group { display: flex; flex-direction: column; gap: 6px; }
-
     .form-group label {
       font-size: 0.7rem;
       letter-spacing: 0.18em;
@@ -472,7 +468,6 @@
       color: var(--gray-mid);
       font-weight: 600;
     }
-
     .form-group input,
     .form-group textarea {
       border: 1px solid #ddd;
@@ -491,9 +486,7 @@
       background: var(--white);
     }
     .form-group textarea { min-height: 130px; resize: vertical; }
-
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
     .form-submit {
       background: var(--red);
       color: var(--white);
@@ -510,29 +503,28 @@
       align-self: flex-start;
     }
     .form-submit:hover { background: var(--red-light); transform: translateY(-2px); }
-
     .form-note {
       font-size: 0.75rem;
       color: var(--gray-mid);
       line-height: 1.6;
     }
 
-	/* ─── FOOTER ─── */
-	footer {
-	  position: fixed;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  z-index: 100;
-	  background: var(--dark);
-	  color: rgba(255,255,255,0.5);
-	  padding: 40px 60px;
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  flex-wrap: wrap;
-	  gap: 16px;
-	}
+    /* ─── FOOTER ─── */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      padding: 16px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
 
     .footer-brand {
       font-family: 'Cormorant Garamond', serif;
@@ -541,9 +533,7 @@
       color: var(--white);
     }
     .footer-brand span { color: var(--red); }
-
     .footer-copy { font-size: 0.75rem; }
-
     .footer-links {
       display: flex;
       gap: 24px;
@@ -556,21 +546,19 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--red); }
-	.footer-links svg {
-	  width: 20px;
-	  height: 20px;
-	  fill: rgba(255,255,255,0.45);
-	  vertical-align: middle;
-	  transition: fill 0.2s;
-	}
-	.footer-links a:hover svg {
-	  fill: var(--red);
-	}
+    .footer-links svg {
+      width: 20px;
+      height: 20px;
+      fill: rgba(255,255,255,0.45);
+      vertical-align: middle;
+      transition: fill 0.2s;
+    }
+    .footer-links a:hover svg { fill: var(--red); }
 
     /* ─── WHATSAPP FLOAT ─── */
     .whatsapp-float {
       position: fixed;
-      bottom: 120px; right: 10px;
+      bottom: 70px; right: 10px;
       background: #25D366;
       width: 58px; height: 58px;
       border-radius: 50%;
@@ -628,7 +616,7 @@
       .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
       .gallery-item:nth-child(4) { grid-column: span 1; }
       #contatti { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
-      footer { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 12px 24px; }
       .form-row { grid-template-columns: 1fr; }
       section { padding: 60px 24px; }
     }
